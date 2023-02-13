@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
+import os
 
 def onesList(x):
     return [1] * x
@@ -11,7 +11,7 @@ def getError(x, y, w):
     return (sumOfTraining) / (len(x))
 
 #Getting data from files
-xTraining = open("hw1xtr.dat").read().splitlines()
+xTraining = open('hw1xtr.dat').read().splitlines()
 xTraining = list(map(float, xTraining)) 
 xTrainingOnes = np.matrix([onesList(len(xTraining)), xTraining]).getT()
 
